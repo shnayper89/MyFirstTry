@@ -12,7 +12,7 @@ public class AllTech {
         int qActual = consumpt * space / 100;
         int raznic = qReal - qActual;
         if (raznic >= 0) {
-            System.out.println(this.name + " ostalos  -   " + raznic + " litrov ");
+            System.out.println(this.name + " ostalos  -   " + raznic + " litrov Просто маленькие изменения ");
         }
         else
             System.out.println(this.name + " nehvatilo  -   " + -raznic + " litrov ");
