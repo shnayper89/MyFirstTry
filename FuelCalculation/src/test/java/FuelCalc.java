@@ -10,8 +10,18 @@ public class FuelCalc {
         Car volga = new Car("Volga", 1800, 85, 12);
         Plane boeing747 = new Plane("Boeing747", 180000, 985, 180000);
         jiguli.consumption(12);
-        volga.consumption(12);
-        boeing747.consumption(8000);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
+        jiguli.consumption(12);
 
     }
 }

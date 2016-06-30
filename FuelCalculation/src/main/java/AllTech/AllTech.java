@@ -5,17 +5,18 @@ package AllTech;
  */
 public class AllTech {
     public String name;
-    public int weight, speed, qReal;
+    public float weight, speed, qReal;
 
     public void consumption(int space){
-        int consumpt = this.speed * this.weight / 10000;
-        int qActual = consumpt * space / 100;
-        int raznic = this.qReal - qActual;
-        if (raznic >= 0) {
-            System.out.println(this.name + " ostalos  -   " + raznic + " litrov Просто маленькие изменения ");
+        float consumpt = this.speed * this.weight / 10000;
+        float qActual = consumpt * space / 100;
+        this.qReal = this.qReal - qActual;
+        if (this.qReal >= 0) {
+            System.out.println(this.name + " ostalos  -   " + this.qReal + " litrov");
         }
         else
-            System.out.println(this.name + " nehvatilo  -   " + -raznic + " litrov ");
+            System.out.println(this.name + " nehvatilo  -   " + -this.qReal + " litrov ");
+
     }
 
 }
