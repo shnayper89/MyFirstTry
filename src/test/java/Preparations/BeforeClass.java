@@ -3,7 +3,6 @@ package Preparations;
 
 import Data.LoginPage;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.junit.ScreenShooter;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -22,8 +21,6 @@ public class BeforeClass extends ReadPropertiesForTest{
     final int timeOut = 10000;
    // private final String baseURL = "https://www.jandh.com/signin";
 
-    @Rule
-    public ScreenShooter makeScreenshotOnFailure = ScreenShooter.failedTests().succeededTests();
     LoginPage signInPage = new LoginPage();
 
 
@@ -31,7 +28,6 @@ public class BeforeClass extends ReadPropertiesForTest{
     public void before() {
         Configuration.browser = "chrome";
         Configuration.timeout = timeOut;
-        makeScreenshotOnFailure.captureSuccessfulTests = false;
         System.setProperty(browserPropertyName, browserPropertyPath);
         open(anyData("login"));
        signInPage.loginToAccount(

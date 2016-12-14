@@ -19,7 +19,6 @@ SearchPage searchPage = new SearchPage();
 @Test
 
     public void test(){
-
     search.fillSearchRequest(anyData("checkWord"));
     search.clickOnSearchButton();
     searchPage.assertSearch(anyData("checkWord"));
