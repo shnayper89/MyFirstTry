@@ -4,11 +4,13 @@ import MainPage.MainPage;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.Assert;
+import org.junit.Before;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 /**
  * Created by spirit on 13.12.16.
@@ -18,7 +20,10 @@ public class SearchPage extends MainPage{
     ElementsCollection itemName = $$(".prod_name");
 
 
+
     public void assertSearch(String key) {
+
+
 
 
         for ( int i = 0; i < itemName.size(); i++ ){
@@ -26,6 +31,10 @@ public class SearchPage extends MainPage{
             System.out.println(productName);
             Assert.assertEquals(true, productName.toLowerCase().contains(key));
             System.out.println("yes");
+            executeJavaScript("window.scrollBy(0, 2500)", "");
+            int c = i;
+            System.out.println(c);
         }
+
     }
 }

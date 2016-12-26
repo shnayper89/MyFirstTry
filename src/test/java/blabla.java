@@ -16,7 +16,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class blabla {
 
-    public WebDriver driver;
 
 
 
